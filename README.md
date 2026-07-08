@@ -28,7 +28,7 @@ model to reason more reliably on grade-school math (GSM8K).
 - **Reward shaping:** Custom reward function scores completions on
   presence of the required tags, normalized per rollout group (GRPO-style
   advantage estimation).
-- **Dataset:** [GSM8K](https://github.com/openai/grade-school-math) — grade
+- **Dataset:** [GSM8K](https://github.com/openai/grade-school-math)  grade
   school math word problems.
 
 ## Hyperparameters
