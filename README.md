@@ -2,7 +2,7 @@
 
 Reinforcement-learning based fine-tuning of **Qwen2.5-3B-Instruct** to improve
 step-by-step mathematical reasoning, using **GRPO (Group Relative Policy
-Optimization)** — the same class of RL algorithm used behind reasoning models
+Optimization)** the same class of RL algorithm used behind reasoning models
 like DeepSeek-R1. Trained end-to-end on a single Kaggle T4 GPU using LoRA and
 4-bit quantization.
 
@@ -16,7 +16,7 @@ model to reason more reliably on grade-school math (GSM8K).
 ## Approach
 
 - **Base model:** `Qwen/Qwen2.5-3B-Instruct`
-- **Algorithm:** GRPO (via TRL's `GRPOTrainer`) — samples K rollouts per
+- **Algorithm:** GRPO (via TRL's `GRPOTrainer`) samples K rollouts per
   prompt, normalizes rewards within the group, and updates the policy without
   needing a separate value/critic model.
 - **Efficient training:** 4-bit NF4 quantization (bitsandbytes) + LoRA
